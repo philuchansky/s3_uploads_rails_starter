@@ -1,2 +1,9 @@
-<h1>Scraps#edit</h1>
-<p>Find me in app/views/scraps/edit.html.erb</p>
+<h1>Edit Scrap:</h1>
+
+<%= form_for @scrap do |f| %>
+	<%= f.text_field :image_url, placeholder: "Image Url..." %>
+	<%= f.text_field :caption, placeholder: "Caption... "%>
+	<%= f.submit "Submit" %>
+<% end %>
+
+<%= link_to 'Delete', scrap_path(@scrap), method: 'delete' %>
