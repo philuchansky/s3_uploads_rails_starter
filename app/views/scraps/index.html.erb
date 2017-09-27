@@ -1,10 +1,13 @@
-<h1>All Scraps</h1>
+<h1>Scrap Book</h1>
 
 <% @scraps.each do |s|%>
 	<div>
 		<%= link_to scrap_path(s) do %>
 			<%= image_tag s.image_url %>
 		<% end %>
-		<hr />
 	</div>
+		<small>posted about <%= time_ago_in_words s.created_at %> ago</small>
+		
+	
+	<hr />
 <% end %>
