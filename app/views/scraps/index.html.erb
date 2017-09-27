@@ -1,2 +1,9 @@
-<h1>Scraps#index</h1>
-<p>Find me in app/views/scraps/index.html.erb</p>
+<h1>All Scraps</h1>
+
+<% @scraps.each do |s|%>
+	<div>
+		<%= image_tag s.image_url %>
+		<h3><%= s.caption %></h3>
+		<hr />
+	</div>
+<% end %>
