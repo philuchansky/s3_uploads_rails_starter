@@ -44,6 +44,6 @@ class ScrapsController < ApplicationController
 	
 	private
 	def scrap_params
-		params.require(:scrap).permit(:caption, :image_url)
+		params.require(:scrap).permit(:caption, :image)
 	end
 end
