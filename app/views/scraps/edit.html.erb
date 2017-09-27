@@ -1,7 +1,7 @@
 <h1>Edit Scrap:</h1>
 
 <%= form_for @scrap do |f| %>
-	<%= f.text_field :image_url, placeholder: "Image Url..." %>
+	<%= f.file_field :image %>
 	<%= f.text_field :caption, placeholder: "Caption... "%>
 	<%= f.submit "Submit" %>
 <% end %>

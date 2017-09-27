@@ -3,7 +3,7 @@
 <% @scraps.each do |s|%>
 	<div>
 		<%= link_to scrap_path(s) do %>
-			<%= image_tag s.image_url %>
+			<%= image_tag s.image.url(:medium) %>
 		<% end %>
 	</div>
 	<small>posted about <%= time_ago_in_words s.created_at %> ago</small>
