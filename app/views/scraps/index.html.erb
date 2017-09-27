@@ -2,7 +2,9 @@
 
 <% @scraps.each do |s|%>
 	<div>
-		<%= image_tag s.image_url %>
+		<%= link_to scrap_path(s) do %>
+			<%= image_tag s.image_url %>
+		<% end %>
 		<hr />
 	</div>
 <% end %>
